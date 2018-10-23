@@ -43,7 +43,7 @@ public class NotificationsListener {
 
         } else if ("SUCCESS".equals(buildStatus)) {
 
-            logger.log(Level.INFO, String.format("Build Succeded %s at %s: %s - details %s", buildId, date, buildUrl, message));
+            logger.log(Level.INFO, String.format("Build Succeeded %s at %s: %s - details %s", buildId, date, buildUrl, message));
         }
     }
 }

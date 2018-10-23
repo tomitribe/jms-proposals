@@ -23,33 +23,20 @@ import static java.lang.annotation.ElementType.METHOD;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 /**
- * This annotation designates a callback method on a JMS message-driven bean that will receive messages from a queue,
- * and specifies the queue from which messages will be received.
+ * Containing annotation for annotations of type {@code ListenerProperty}.
  *
  * <p>
- * This annotation may only be used if the JMS message-driven bean implements the {@code JMSMessageDrivenBean} marker
- * interface and does not implement the {@code MessageListener} interface. If this annotation is used on a JMS
- * message-driven bean that implements the {@code MessageListener} interface then deployment will fail.
+ * This annotation is used internally when a method or class is annotated with more than one {@code ListenerProperty}
+ * annotation. Applications do not need to use this annotation directly.
  *
- * <p>
- * Only one method may be designated as a callback method. If more than one method on a JMS message-driven bean is
- * annotated with {@code QueueListener} or {@code TopicListener} then deployment will fail.
- *
- * @see MessageConsumer
- * @see TopicListener
- *
+ * @see ListenerProperty
  * @version JMS 2.1
  * @since JMS 2.1
  */
-@Retention(RUNTIME)
 @Target(METHOD)
-public @interface QueueListener {
+@Retention(RUNTIME)
+public @interface ListenerProperties {
 
-    /**
-     * Lookup name of the Queue from which messages will be received.
-     *
-     * @return The lookup name of the Queue.
-     */
-    String value();
+    ListenerProperty[] value();
 
 }

@@ -13,36 +13,38 @@
  */
 package org.example;
 
-import javax.enterprise.context.RequestScoped;
 import javax.jms.JMSException;
 import javax.jms.MessageConsumer;
 import javax.jms.MessageProperty;
 import javax.jms.TopicListener;
+import java.net.URI;
+import java.net.URL;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-@RequestScoped
 @MessageConsumer
 public class NotificationsListener {
 
     private final Logger logger = Logger.getLogger(NotificationsListener.class.getName());
 
     @TopicListener("BUILD.NOTIFICATIONS")
-    public void processNotifications(@MessageProperty("buildId") final String buildId,
-                                     @MessageProperty("date") final long date,
-                                     @MessageProperty("projectUrl") final String projectUrl,
-                                     @MessageProperty("buildUrl") final String buildUrl,
-                                     @MessageProperty("buildStatus") final String buildStatus,
+    public void processNotifications(@MessageProperty("buildId") final BuildId buildId,
+                                     @MessageProperty("date") final Date date,
+                                     @MessageProperty("projectUrl") final URL projectUrl,
+                                     @MessageProperty("buildUrl") final URI buildUrl,
+                                     @MessageProperty("buildStatus") final BuildStatus buildStatus,
                                      final String message) throws JMSException {
 
 
-        if ("FAIL".equals(buildStatus)) {
-
-            logger.log(Level.SEVERE, String.format("Build Failed %s at %s: %s - details %s", buildId, date, buildUrl, message));
-
-        } else if ("SUCCESS".equals(buildStatus)) {
-
-            logger.log(Level.INFO, String.format("Build Succeeded %s at %s: %s - details %s", buildId, date, buildUrl, message));
+        switch (buildStatus) {
+            case FAIL:
+                logger.log(Level.SEVERE, String.format("Build Failed %s at %s: %s - details %s", buildId, date, buildUrl, message));
+                break;
+            case SUCCESS:
+                logger.log(Level.INFO, String.format("Build Succeeded %s at %s: %s - details %s", buildId, date, buildUrl, message));
+                break;
         }
     }
+
 }

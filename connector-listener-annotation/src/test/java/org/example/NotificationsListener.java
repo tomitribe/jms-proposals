@@ -14,7 +14,6 @@
 package org.example;
 
 import javax.jms.JMSException;
-import javax.jms.JMSMessageDrivenBean;
 import javax.jms.MessageConsumer;
 import javax.jms.MessageProperty;
 import javax.jms.TopicListener;
@@ -41,7 +40,7 @@ public class NotificationsListener {
 
         } else if ("SUCCESS".equals(buildStatus)) {
 
-            logger.log(Level.INFO, String.format("Build Succeded %s at %s: %s - details %s", buildId, date, buildUrl, message));
+            logger.log(Level.INFO, String.format("Build Succeeded %s at %s: %s - details %s", buildId, date, buildUrl, message));
         }
     }
 }
