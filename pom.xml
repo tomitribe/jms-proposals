@@ -21,6 +21,12 @@
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
+  <modules>
+    <module>jms-21</module>
+    <module>cdi-stereotypes</module>
+    <module>mdb-revamp</module>
+  </modules>
+
   <dependencies>
     <dependency>
       <groupId>javax</groupId>
@@ -29,9 +35,6 @@
     </dependency>
   </dependencies>
 
-  <modules>
-    <module>jms-21</module>
-  </modules>
 
   <build>
     <plugins>
