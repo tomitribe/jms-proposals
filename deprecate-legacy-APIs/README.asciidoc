@@ -1,0 +1,5 @@
+== Deprecate Legacy APIs
+
+JMS 2.0 defined a simpler API for producing and consuming messages called the "Simplified" API.  This API can accomplish anything that the JMS 1.0 domain-specific API or the JMS 1.1 classic API could do. The older domain-specific and classic APIs are no longer needed but have been preserved for backward compatibility. 
+
+The domain-specific and the classic APIs, defined in JMS 1.0 and 1.1 respectively, should be marked as deprecated and optional in JMS 3.0 and removed in a future version of the specification.  Those types which are used by both the Simplified API and legacy APIs (e.g Message, Queue) would not be deprecated.
