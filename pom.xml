@@ -25,6 +25,7 @@
     <module>cdi-stereotypes-app</module>
     <module>mdb-revamp</module>
     <module>connector-listener-annotation</module>
+    <module>cdi-application-scoped</module>
   </modules>
 
   <dependencies>
