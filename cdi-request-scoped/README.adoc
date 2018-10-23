@@ -1,0 +1,5 @@
+# CDI RequestScoped
+
+Use of CDI RequestScoped beans could also be supported by the Jakarta EE Connector Architecture.
+
+JAX-RS allows for both ApplicationScoped and RequestScoped CDI Beans. RequestScoped beans live for the life of the HTTP Request.  For JMS the bean would live for the life of the JMS Message delivery.  This would obviously be very short and consuming multiple messages in a row could add overhead.

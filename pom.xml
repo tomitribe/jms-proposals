@@ -26,6 +26,7 @@
     <module>mdb-revamp</module>
     <module>connector-listener-annotation</module>
     <module>cdi-application-scoped</module>
+    <module>cdi-request-scoped</module>
   </modules>
 
   <dependencies>

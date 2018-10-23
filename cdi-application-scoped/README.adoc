@@ -1,4 +1,3 @@
 # CDI ApplicationScoped
 
-Use of CDI ApplicationScoped beans could easily be supported by the Jakarta EE Connector Architecture.  These beans would be visible
- via the BeanManager without concerns of a scope that is not enabled.
+Use of CDI ApplicationScoped beans could easily be supported by the Jakarta EE Connector Architecture.  These beans would be visible via the BeanManager without concerns of a scope that is not enabled.
