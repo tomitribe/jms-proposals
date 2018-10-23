@@ -1,0 +1,3 @@
+# MDB Revamp
+
+Largely for historical purposes, this is the sample code that initiated the revamp of MDB/Connector relationship as it pertained to JMS.  It was used largely for illustrative purposes of the potential for annotations to change the API we have for consuming JMS messages via MDB (callback style).
