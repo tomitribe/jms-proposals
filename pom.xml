@@ -29,6 +29,7 @@
     <module>cdi-request-scoped</module>
     <module>property-conversion</module>
     <module>jsonb-integration</module>
+    <module>all-together</module>
   </modules>
 
   <dependencies>
