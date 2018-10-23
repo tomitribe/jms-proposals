@@ -15,14 +15,15 @@ package org.example;
 
 import javax.ejb.MessageDriven;
 import javax.jms.JMSException;
-import javax.jms.JMSMessageDrivenBean;
+import javax.jms.MessageConsumer;
 import javax.jms.MessageProperty;
 import javax.jms.TopicListener;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 @MessageDriven
-public class NotificationsListener implements JMSMessageDrivenBean {
+@MessageConsumer
+public class NotificationsListener {
 
     private final Logger logger = Logger.getLogger(NotificationsListener.class.getName());
 
