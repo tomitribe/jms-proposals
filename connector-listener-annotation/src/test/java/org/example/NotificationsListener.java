@@ -22,7 +22,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 @MessageConsumer
-public class NotificationsListener implements JMSMessageDrivenBean {
+public class NotificationsListener {
 
     private final Logger logger = Logger.getLogger(NotificationsListener.class.getName());
 

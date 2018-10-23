@@ -26,7 +26,7 @@ import javax.jms.TopicListener;
 @MessageConsumer
 @MaxSessions(3)
 @MaxMessagesPerSession(1)
-public class BuildTasksMessageListener implements JMSMessageDrivenBean {
+public class BuildTasksMessageListener {
 
     @QueueListener("TASK.QUEUE")
     public void processBuildTask(final ObjectMessage objectMessage) throws JMSException {
