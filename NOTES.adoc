@@ -1,0 +1,12 @@
+
+MDB Revamp
+JMS 2.1
+CDI Stereotypes
+JAX-RS Actually uses their own form of Stereotyping, see @GET
+CDI Support
+ApplicationScoped
+RequestScoped
+Converting Types
+JSON-B Integration
+Jms.contenttype header
+Producing Outbound Messages
