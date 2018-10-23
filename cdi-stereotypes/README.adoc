@@ -1,0 +1,3 @@
+# JMS 2.1
+
+Contains the proposed new classes in the withdrawn JMS 2.1 JSR.  These went through several different states and will likely morph more before an expected JMS 3.0 is released.
