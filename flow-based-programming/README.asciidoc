@@ -1,0 +1,53 @@
+== Flow-Based Programming Model
+
+Since its inception the Message Driven Bean's message handling method (i.e. onMessage()) has returned void. If the new MBD allows message handling with custom method names (e.g. handleMessage()) than the return value can still be void or it can be mapped to an outgoing message in the same way that the parameter of the current onMessage() method maps incoming messages to types (e.g. TextMessage, ObjectMessage).
+
+The return type maps to a message type or the messages body type (e.g. TextMessage has a String body type).  When a return value is specified annotations indicate to which destination the message is intended.
+
+The parameter of any message handling method will always map to incoming messages while the return type maps to outgoing messages.
+
+The mapping of parameter types to message types is as follows:
+
+[width="80%"]
+|=======
+|String |TextMessage
+|Map |MapMessage
+|byte [] |BytesMessage
+|InputStream/OutputStream | StreamMessage
+|Object | ObjectMessage
+|=======
+Annotations are used to describe the message model, destination type and identity, and any other standard, provider specific, or custom properties of incoming and outgoing messages.  The annotations are named, @Outgoing and @Incoming and define elements that map to the various standard, provider-specific, and generic properties.  The following is an example MBD that uses a custom method for handling messages both consumed and produced by the MBD.
+
+----
+public class Flow2 {
+
+    @InMessage(
+            @MessageConfig(
+                messageType = TEXT_MESSAGE,
+                destination = "XYX.TOPIC",
+                destinationType = TOPIC,
+                acknowledgement = DUPS_OK_ACKNOWLEDGE
+            )
+    )
+    @OutMessage(
+            @MessageConfig(
+                destination="ABC.QUEUE",
+                destinationType = QUEUE,
+                replyTo = "DEF.QUEUE"
+            )
+    )
+    public String helloYou(String messageIn) {
+
+        String messageOut = "Hello, ";
+        messageOut += messageIn;
+        return messageOut;
+
+    }
+
+    public static void main(String [] args){
+        Flow2 temp = new Flow2();
+        System.out.println(temp.helloYou("Bob"));
+    }
+}
+----
+
