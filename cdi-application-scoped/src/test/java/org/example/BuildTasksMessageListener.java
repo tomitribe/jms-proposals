@@ -48,7 +48,7 @@ public class BuildTasksMessageListener {
 
 
     // This is the only "useful" code in the class
-    private void doSomethingUseful(final BuildTask buildTask) {
+    private void doSomethingUseful(BuildTask buildTask) {
         System.out.println(buildTask);
     }
 }

@@ -16,14 +16,13 @@ package org.example;
 import io.breezmq.MaxMessagesPerSession;
 import io.breezmq.MaxSessions;
 
-import javax.enterprise.context.ApplicationScoped;
 import javax.jms.JMSException;
+import javax.jms.JMSMessageDrivenBean;
 import javax.jms.MessageConsumer;
 import javax.jms.ObjectMessage;
 import javax.jms.QueueListener;
 import javax.jms.TopicListener;
 
-@ApplicationScoped
 @MessageConsumer
 @MaxSessions(3)
 @MaxMessagesPerSession(1)
@@ -48,7 +47,7 @@ public class BuildTasksMessageListener {
 
 
     // This is the only "useful" code in the class
-    private void doSomethingUseful(final BuildTask buildTask) {
+    private void doSomethingUseful(BuildTask buildTask) {
         System.out.println(buildTask);
     }
 }

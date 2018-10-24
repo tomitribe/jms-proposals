@@ -21,11 +21,10 @@ import javax.jms.JMSException;
 import javax.jms.JMSProducer;
 import javax.jms.JMSRuntimeException;
 import javax.jms.MessageConsumer;
+import javax.jms.MessageHeader;
 import javax.jms.ObjectMessage;
 import javax.jms.QueueListener;
 import javax.jms.Topic;
-import javax.jms.headers.CorrelationID;
-import javax.jms.headers.ReplyTo;
 
 @ApplicationScoped
 @MessageConsumer
@@ -35,8 +34,8 @@ public class BuildAndNotify {
     private ConnectionFactory connectionFactory;
 
     @QueueListener("PROJECT.BUILD")
-    public void buildProject(@ReplyTo final Topic buildNotifications,
-                             @CorrelationID final String buildId,
+    public void buildProject(@MessageHeader(MessageHeader.Header.JMSReplyTo) final Topic buildNotifications,
+                             @MessageHeader(MessageHeader.Header.JMSCorrelationID) final String buildId,
                              final ObjectMessage objectMessage) throws JMSException {
 
         final Project project = (Project) objectMessage.getObject();

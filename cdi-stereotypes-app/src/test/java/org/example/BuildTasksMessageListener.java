@@ -16,18 +16,17 @@ package org.example;
 import io.breezmq.MaxMessagesPerSession;
 import io.breezmq.MaxSessions;
 
-import javax.enterprise.context.ApplicationScoped;
+import javax.ejb.MessageDriven;
 import javax.jms.JMSException;
-import javax.jms.MessageConsumer;
+import javax.jms.JMSMessageDrivenBean;
 import javax.jms.ObjectMessage;
 import javax.jms.QueueListener;
 import javax.jms.TopicListener;
 
-@ApplicationScoped
-@MessageConsumer
+@MessageDriven
 @MaxSessions(3)
 @MaxMessagesPerSession(1)
-public class BuildTasksMessageListener {
+public class BuildTasksMessageListener implements JMSMessageDrivenBean {
 
     @QueueListener("TASK.QUEUE")
     public void processBuildTask(final ObjectMessage objectMessage) throws JMSException {

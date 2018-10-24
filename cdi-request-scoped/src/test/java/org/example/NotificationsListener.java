@@ -13,7 +13,7 @@
  */
 package org.example;
 
-import javax.ejb.MessageDriven;
+import javax.enterprise.context.RequestScoped;
 import javax.jms.JMSException;
 import javax.jms.MessageConsumer;
 import javax.jms.MessageProperty;
@@ -21,7 +21,7 @@ import javax.jms.TopicListener;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-@MessageDriven
+@RequestScoped
 @MessageConsumer
 public class NotificationsListener {
 
