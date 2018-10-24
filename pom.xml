@@ -25,6 +25,7 @@
     <module>jms-21</module>
     <module>cdi-stereotypes</module>
     <module>mdb-revamp</module>
+    <module>flow-based-programming</module>
   </modules>
 
   <dependencies>
