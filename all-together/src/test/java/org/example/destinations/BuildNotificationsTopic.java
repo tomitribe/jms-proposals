@@ -11,16 +11,20 @@
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  */
-package org.example;
+package org.example.destinations;
 
-public class BuildId {
-    private final String string;
+import javax.enterprise.inject.Stereotype;
+import javax.jms.QueueListener;
+import javax.jms.TopicListener;
+import java.lang.annotation.Retention;
+import java.lang.annotation.Target;
 
-    public BuildId(final String string) {
-        this.string = string;
-    }
+import static java.lang.annotation.ElementType.METHOD;
+import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
-    public String getString() {
-        return string;
-    }
+@Stereotype
+@TopicListener("BUILD.NOTIFICATIONS")
+@Target(METHOD)
+@Retention(RUNTIME)
+public @interface BuildNotificationsTopic {
 }

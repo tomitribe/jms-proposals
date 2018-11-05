@@ -19,6 +19,7 @@ package javax.jms;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 
+import static java.lang.annotation.ElementType.ANNOTATION_TYPE;
 import static java.lang.annotation.ElementType.METHOD;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
@@ -37,7 +38,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
  * @since JMS 2.1
  */
 @Retention(RUNTIME)
-@Target(METHOD)
+@Target({METHOD, ANNOTATION_TYPE})
 public @interface SubscriptionName {
 
     /**

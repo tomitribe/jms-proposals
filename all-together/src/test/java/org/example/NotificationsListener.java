@@ -13,6 +13,7 @@
  */
 package org.example;
 
+import org.example.destinations.BuildNotificationsTopic;
 import org.example.properties.BuildIdParam;
 import org.example.properties.BuildStatusParam;
 import org.example.properties.BuildUrlParam;
@@ -21,8 +22,6 @@ import org.example.properties.ProjectUrlParam;
 
 import javax.jms.JMSException;
 import javax.jms.MessageConsumer;
-import javax.jms.MessageProperty;
-import javax.jms.TopicListener;
 import java.net.URI;
 import java.net.URL;
 import java.util.Date;
@@ -34,7 +33,7 @@ public class NotificationsListener {
 
     private final Logger logger = Logger.getLogger(NotificationsListener.class.getName());
 
-    @TopicListener("BUILD.NOTIFICATIONS")
+    @BuildNotificationsTopic
     public void processNotifications(@BuildIdParam final BuildId buildId,
                                      @DateParam final Date date,
                                      @ProjectUrlParam final URL projectUrl,

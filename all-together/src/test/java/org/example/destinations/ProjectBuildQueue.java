@@ -11,19 +11,21 @@
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  */
-package javax.jms.headers.headers;
+package org.example.destinations;
 
 import javax.enterprise.inject.Stereotype;
-import javax.jms.MessageHeader;
+import javax.jms.MessageProperty;
+import javax.jms.QueueListener;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 
+import static java.lang.annotation.ElementType.METHOD;
 import static java.lang.annotation.ElementType.PARAMETER;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 @Stereotype
-@MessageHeader(MessageHeader.Header.JMSDestination)
-@Target(PARAMETER)
+@QueueListener("PROJECT.BUILD")
+@Target(METHOD)
 @Retention(RUNTIME)
-public @interface Destination {
+public @interface ProjectBuildQueue {
 }

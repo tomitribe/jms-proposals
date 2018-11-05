@@ -11,7 +11,7 @@
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  */
-package javax.jms.headers.headers;
+package javax.jms.headers;
 
 import javax.enterprise.inject.Stereotype;
 import javax.jms.MessageHeader;

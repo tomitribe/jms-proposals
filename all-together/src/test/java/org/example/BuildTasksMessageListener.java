@@ -15,26 +15,25 @@ package org.example;
 
 import io.breezmq.MaxMessagesPerSession;
 import io.breezmq.MaxSessions;
+import org.example.destinations.BuildTopic;
+import org.example.destinations.TaskQueue;
 
 import javax.jms.JMSException;
 import javax.jms.MessageConsumer;
-import javax.jms.ObjectMessage;
-import javax.jms.QueueListener;
-import javax.jms.TopicListener;
 
 @MessageConsumer
 @MaxSessions(3)
 @MaxMessagesPerSession(1)
 public class BuildTasksMessageListener {
 
-    @QueueListener("TASK.QUEUE")
+    @TaskQueue
     public void processBuildTask(final BuildTask buildTask) throws JMSException {
 
         doSomethingUseful(buildTask);
 
     }
 
-    @TopicListener("BUILD.TOPIC")
+    @BuildTopic
     public void processBuildNotification(final BuildNotification notification) throws JMSException {
 
         System.out.println("Something happened " + notification);
