@@ -13,6 +13,8 @@
  */
 package org.example;
 
+import org.example.destinations.ProjectBuildQueue;
+
 import javax.annotation.Resource;
 import javax.ejb.MessageDriven;
 import javax.jms.ConnectionFactory;
@@ -22,7 +24,6 @@ import javax.jms.JMSMessageDrivenBean;
 import javax.jms.JMSProducer;
 import javax.jms.JMSRuntimeException;
 import javax.jms.ObjectMessage;
-import javax.jms.QueueListener;
 import javax.jms.Topic;
 import javax.jms.headers.CorrelationID;
 import javax.jms.headers.ReplyTo;
@@ -33,7 +34,7 @@ public class BuildAndNotify implements JMSMessageDrivenBean {
     @Resource
     private ConnectionFactory connectionFactory;
 
-    @QueueListener("PROJECT.BUILD")
+    @ProjectBuildQueue
     public void buildProject(@ReplyTo final Topic buildNotifications,
                              @CorrelationID final String buildId,
                              final ObjectMessage objectMessage) throws JMSException {

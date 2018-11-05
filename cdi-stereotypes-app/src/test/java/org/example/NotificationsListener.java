@@ -13,11 +13,12 @@
  */
 package org.example;
 
+import org.example.destinations.BuildNotificationsTopic;
+
 import javax.ejb.MessageDriven;
 import javax.jms.JMSException;
 import javax.jms.JMSMessageDrivenBean;
 import javax.jms.MessageProperty;
-import javax.jms.TopicListener;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -26,7 +27,7 @@ public class NotificationsListener implements JMSMessageDrivenBean {
 
     private final Logger logger = Logger.getLogger(NotificationsListener.class.getName());
 
-    @TopicListener("BUILD.NOTIFICATIONS")
+    @BuildNotificationsTopic
     public void processNotifications(@MessageProperty("buildId") final String buildId,
                                      @MessageProperty("date") final long date,
                                      @MessageProperty("projectUrl") final String projectUrl,
