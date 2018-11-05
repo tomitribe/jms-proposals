@@ -73,7 +73,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
  * @version JMS 2.1
  * @since JMS 2.1
  */
-@Target({PARAMETER, ANNOTATION_TYPE})
+@Target({ANNOTATION_TYPE, PARAMETER})
 @Retention(RUNTIME)
 public @interface MessageProperty {
 

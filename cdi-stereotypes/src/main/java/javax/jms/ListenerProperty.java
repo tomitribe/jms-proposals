@@ -20,6 +20,7 @@ import java.lang.annotation.Repeatable;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 
+import static java.lang.annotation.ElementType.ANNOTATION_TYPE;
 import static java.lang.annotation.ElementType.METHOD;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
@@ -49,7 +50,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
  */
 @Repeatable(ListenerProperties.class)
 @Retention(RUNTIME)
-@Target(METHOD)
+@Target({ANNOTATION_TYPE, METHOD})
 public @interface ListenerProperty {
 
     /**

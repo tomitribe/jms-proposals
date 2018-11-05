@@ -19,6 +19,7 @@ package javax.jms;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 
+import static java.lang.annotation.ElementType.ANNOTATION_TYPE;
 import static java.lang.annotation.ElementType.METHOD;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
@@ -35,14 +36,13 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
  * Only one method may be designated as a callback method. If more than one method on a JMS message-driven bean is
  * annotated with {@code QueueListener} or {@code TopicListener} then deployment will fail.
  *
- * @see JMSMessageDrivenBean
  * @see TopicListener
  *
  * @version JMS 2.1
  * @since JMS 2.1
  */
 @Retention(RUNTIME)
-@Target(METHOD)
+@Target({ANNOTATION_TYPE, METHOD})
 public @interface QueueListener {
 
     /**

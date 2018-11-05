@@ -40,7 +40,6 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
  * Only one method may be designated as a callback method. If more than one method on a JMS message-driven bean is
  * annotated with {@code QueueListener} or {@code TopicListener} then deployment will fail.
  *
- * @see MessageConsumer
  * @see QueueListener
  * @see DurableSubscription
  *
@@ -48,7 +47,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
  * @since JMS 2.1
  */
 @Retention(RUNTIME)
-@Target({METHOD, ANNOTATION_TYPE})
+@Target({ANNOTATION_TYPE, METHOD})
 public @interface TopicListener {
 
     /**
