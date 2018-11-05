@@ -34,30 +34,30 @@ public class BuildAndNotify implements JMSMessageDrivenBean {
 
     @QueueListener("PROJECT.BUILD")
     public void buildProject(@MessageHeader(MessageHeader.Header.JMSReplyTo) final Topic buildNotifications,
-                              @MessageHeader(MessageHeader.Header.JMSCorrelationID) final String buildId,
-                              final ObjectMessage objectMessage) throws JMSException {
+                             @MessageHeader(MessageHeader.Header.JMSCorrelationID) final String buildId,
+                             final ObjectMessage objectMessage) throws JMSException {
 
         final Project project = (Project) objectMessage.getObject();
 
         try {
             build(project);
 
-            try (JMSContext context = connectionFactory.createContext()){
+            try (JMSContext context = connectionFactory.createContext()) {
                 final JMSProducer producer = context.createProducer();
                 producer.setJMSCorrelationID(buildId);
                 producer.send(buildNotifications, "SUCCESS");
             } catch (JMSRuntimeException ex) {
-               // handle exception (details omitted)
+                // handle exception (details omitted)
             }
 
         } catch (Exception e) {
 
-            try (JMSContext context = connectionFactory.createContext()){
+            try (JMSContext context = connectionFactory.createContext()) {
                 final JMSProducer producer = context.createProducer();
                 producer.setJMSCorrelationID(buildId);
                 producer.send(buildNotifications, "FAIL");
             } catch (JMSRuntimeException ex) {
-               // handle exception (details omitted)
+                // handle exception (details omitted)
             }
         }
     }

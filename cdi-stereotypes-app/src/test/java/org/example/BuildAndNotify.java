@@ -21,7 +21,6 @@ import javax.jms.JMSException;
 import javax.jms.JMSMessageDrivenBean;
 import javax.jms.JMSProducer;
 import javax.jms.JMSRuntimeException;
-import javax.jms.MessageHeader;
 import javax.jms.ObjectMessage;
 import javax.jms.QueueListener;
 import javax.jms.Topic;
@@ -36,30 +35,30 @@ public class BuildAndNotify implements JMSMessageDrivenBean {
 
     @QueueListener("PROJECT.BUILD")
     public void buildProject(@ReplyTo final Topic buildNotifications,
-                              @CorrelationID final String buildId,
-                              final ObjectMessage objectMessage) throws JMSException {
+                             @CorrelationID final String buildId,
+                             final ObjectMessage objectMessage) throws JMSException {
 
         final Project project = (Project) objectMessage.getObject();
 
         try {
             build(project);
 
-            try (JMSContext context = connectionFactory.createContext()){
+            try (JMSContext context = connectionFactory.createContext()) {
                 final JMSProducer producer = context.createProducer();
                 producer.setJMSCorrelationID(buildId);
                 producer.send(buildNotifications, "SUCCESS");
             } catch (JMSRuntimeException ex) {
-               // handle exception (details omitted)
+                // handle exception (details omitted)
             }
 
         } catch (Exception e) {
 
-            try (JMSContext context = connectionFactory.createContext()){
+            try (JMSContext context = connectionFactory.createContext()) {
                 final JMSProducer producer = context.createProducer();
                 producer.setJMSCorrelationID(buildId);
                 producer.send(buildNotifications, "FAIL");
             } catch (JMSRuntimeException ex) {
-               // handle exception (details omitted)
+                // handle exception (details omitted)
             }
         }
     }

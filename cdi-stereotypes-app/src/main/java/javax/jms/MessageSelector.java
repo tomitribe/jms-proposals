@@ -48,7 +48,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
  * @since JMS 2.1
  */
 @Retention(RUNTIME)
-@Target({ METHOD, TYPE, ANNOTATION_TYPE })
+@Target({METHOD, TYPE, ANNOTATION_TYPE})
 public @interface MessageSelector {
 
     /**

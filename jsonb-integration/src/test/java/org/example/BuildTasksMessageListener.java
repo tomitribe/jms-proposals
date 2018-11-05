@@ -18,7 +18,6 @@ import io.breezmq.MaxSessions;
 
 import javax.jms.JMSException;
 import javax.jms.MessageConsumer;
-import javax.jms.ObjectMessage;
 import javax.jms.QueueListener;
 import javax.jms.TopicListener;
 

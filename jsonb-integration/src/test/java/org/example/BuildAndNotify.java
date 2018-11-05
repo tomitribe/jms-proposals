@@ -21,7 +21,6 @@ import javax.jms.JMSProducer;
 import javax.jms.JMSRuntimeException;
 import javax.jms.MessageConsumer;
 import javax.jms.MessageHeader;
-import javax.jms.ObjectMessage;
 import javax.jms.QueueListener;
 import javax.jms.Topic;
 

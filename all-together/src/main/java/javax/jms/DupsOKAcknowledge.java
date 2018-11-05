@@ -57,7 +57,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
  *
  */
 @Retention(RUNTIME)
-@Target({ METHOD, TYPE, ANNOTATION_TYPE })
+@Target({METHOD, TYPE, ANNOTATION_TYPE})
 public @interface DupsOKAcknowledge {
 
 }

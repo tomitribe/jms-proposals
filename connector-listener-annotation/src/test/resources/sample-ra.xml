@@ -13,32 +13,32 @@
     SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 -->
 <connector xmlns="http://xmlns.jcp.org/xml/ns/javaee"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/connector_1_7.xsd"
-      version="1.7">
-	<description>Breezmq Connector Resource Adapter</description>
-	<display-name>Breezmq Connector Resource Adapter</display-name>
-	<eis-type>Breezmq Adapter</eis-type>
-	<resourceadapter-version>1.0</resourceadapter-version>
-	<license>
-		<license-required>false</license-required>
-	</license>
-	<resourceadapter>
-		<resourceadapter-class>io.breezmq.adapter.BreezmqResourceAdapter</resourceadapter-class>
-		<config-property>
-			<config-property-name>port</config-property-name>
-			<config-property-type>java.lang.Integer</config-property-type>
-			<config-property-value>2222</config-property-value>
-		</config-property>
-		<inbound-resourceadapter>
-			<messageadapter>
-				<messagelistener>
-					<messagelistener-type>javax.jms.MessageConsumer</messagelistener-type>
-					<activationspec>
-						<activationspec-class>io.breezmq.adapter.BreezmqActivationSpec</activationspec-class>
-					</activationspec>
-				</messagelistener>
-			</messageadapter>
-		</inbound-resourceadapter>
-	</resourceadapter>
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/connector_1_7.xsd"
+           version="1.7">
+  <description>Breezmq Connector Resource Adapter</description>
+  <display-name>Breezmq Connector Resource Adapter</display-name>
+  <eis-type>Breezmq Adapter</eis-type>
+  <resourceadapter-version>1.0</resourceadapter-version>
+  <license>
+    <license-required>false</license-required>
+  </license>
+  <resourceadapter>
+    <resourceadapter-class>io.breezmq.adapter.BreezmqResourceAdapter</resourceadapter-class>
+    <config-property>
+      <config-property-name>port</config-property-name>
+      <config-property-type>java.lang.Integer</config-property-type>
+      <config-property-value>2222</config-property-value>
+    </config-property>
+    <inbound-resourceadapter>
+      <messageadapter>
+        <messagelistener>
+          <messagelistener-type>javax.jms.MessageConsumer</messagelistener-type>
+          <activationspec>
+            <activationspec-class>io.breezmq.adapter.BreezmqActivationSpec</activationspec-class>
+          </activationspec>
+        </messagelistener>
+      </messageadapter>
+    </inbound-resourceadapter>
+  </resourceadapter>
 </connector>

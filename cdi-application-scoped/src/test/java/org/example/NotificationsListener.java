@@ -15,7 +15,6 @@ package org.example;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.jms.JMSException;
-import javax.jms.JMSMessageDrivenBean;
 import javax.jms.MessageConsumer;
 import javax.jms.MessageProperty;
 import javax.jms.TopicListener;

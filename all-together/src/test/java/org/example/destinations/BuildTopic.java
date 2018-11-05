@@ -14,7 +14,6 @@
 package org.example.destinations;
 
 import javax.enterprise.inject.Stereotype;
-import javax.jms.QueueListener;
 import javax.jms.TopicListener;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
