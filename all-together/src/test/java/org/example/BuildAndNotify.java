@@ -16,6 +16,7 @@ package org.example;
 import org.example.destinations.ProjectBuildQueue;
 
 import javax.annotation.Resource;
+import javax.enterprise.context.ApplicationScoped;
 import javax.jms.ConnectionFactory;
 import javax.jms.JMSException;
 import javax.jms.MessageConsumer;
@@ -24,6 +25,7 @@ import javax.jms.Topic;
 import javax.jms.headers.CorrelationID;
 import javax.jms.headers.ReplyTo;
 
+@ApplicationScoped
 @MessageConsumer
 public class BuildAndNotify {
 
@@ -42,24 +44,16 @@ public class BuildAndNotify {
         try {
             build(project);
 
-            notificationsClient.processNotifications(
-                    buildId,
-                    project.getUrl(),
-                    BuildStatus.SUCCESS
-            );
+            notificationsClient.processNotifications(buildId, project.getUrl(), BuildStatus.SUCCESS);
 
         } catch (Exception e) {
 
-            notificationsClient.processNotifications(
-                    buildId,
-                    project.getUrl(),
-                    BuildStatus.FAIL
-            );
+            notificationsClient.processNotifications(buildId, project.getUrl(), BuildStatus.FAIL);
         }
     }
 
     private void build(final Project project) {
-
+        // DO WORK
     }
-
 }
+
