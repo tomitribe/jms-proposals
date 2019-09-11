@@ -22,16 +22,17 @@
   <packaging>pom</packaging>
 
   <modules>
-    <module>jms-21</module>
-    <module>cdi-stereotypes</module>
     <module>mdb-revamp</module>
+    <module>jms-21</module>
     <module>connector-listener-annotation</module>
     <module>cdi-application-scoped</module>
     <module>cdi-request-scoped</module>
+    <module>cdi-stereotypes</module>
+    <module>cdi-stereotypes-app</module>
     <module>property-conversion</module>
     <module>jsonb-integration</module>
     <module>all-together</module>
-    <module>flow-based-programming</module>
+    <module>messaging-client</module>
   </modules>
 
   <dependencies>

@@ -13,16 +13,14 @@
  */
 package org.example;
 
-import org.example.destinations.ProjectBuildQueue;
-
 import javax.annotation.Resource;
 import javax.jms.ConnectionFactory;
 import javax.jms.JMSException;
 import javax.jms.MessageConsumer;
+import javax.jms.MessageHeader;
 import javax.jms.MessagingClientBuilder;
+import javax.jms.QueueListener;
 import javax.jms.Topic;
-import javax.jms.headers.CorrelationID;
-import javax.jms.headers.ReplyTo;
 
 @MessageConsumer
 public class BuildAndNotify {
@@ -30,9 +28,9 @@ public class BuildAndNotify {
     @Resource
     private ConnectionFactory connectionFactory;
 
-    @ProjectBuildQueue
-    public void buildProject(@ReplyTo final Topic buildNotifications,
-                             @CorrelationID final BuildId buildId,
+    @QueueListener("PROJECT.BUILD")
+    public void buildProject(@MessageHeader(MessageHeader.Header.JMSReplyTo) final Topic buildNotifications,
+                             @MessageHeader(MessageHeader.Header.JMSCorrelationID) final String buildId,
                              final Project project) throws JMSException {
 
         final NotificationsClient notificationsClient = MessagingClientBuilder.newBuilder()
@@ -45,7 +43,7 @@ public class BuildAndNotify {
             notificationsClient.processNotifications(
                     buildId,
                     project.getUrl(),
-                    BuildStatus.SUCCESS
+                    "SUCCESS"
             );
 
         } catch (Exception e) {
@@ -53,7 +51,7 @@ public class BuildAndNotify {
             notificationsClient.processNotifications(
                     buildId,
                     project.getUrl(),
-                    BuildStatus.FAIL
+                    "FAIL"
             );
         }
     }
