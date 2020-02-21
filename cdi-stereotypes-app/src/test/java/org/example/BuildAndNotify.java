@@ -17,14 +17,14 @@ import org.example.destinations.ProjectBuildQueue;
 
 import javax.annotation.Resource;
 import javax.ejb.MessageDriven;
-import javax.jms.ConnectionFactory;
-import javax.jms.JMSContext;
-import javax.jms.JMSException;
+import jakarta.jms.ConnectionFactory;
+import jakarta.jms.JMSContext;
+import jakarta.jms.JMSException;
 import jakarta.jms.JMSMessageDrivenBean;
-import javax.jms.JMSProducer;
-import javax.jms.JMSRuntimeException;
-import javax.jms.ObjectMessage;
-import javax.jms.Topic;
+import jakarta.jms.JMSProducer;
+import jakarta.jms.JMSRuntimeException;
+import jakarta.jms.ObjectMessage;
+import jakarta.jms.Topic;
 import jakarta.jms.headers.CorrelationID;
 import jakarta.jms.headers.ReplyTo;
 

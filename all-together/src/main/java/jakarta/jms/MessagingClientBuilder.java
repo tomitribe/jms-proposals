@@ -15,7 +15,7 @@
  */
 package jakarta.jms;
 
-import javax.jms.ConnectionFactory;
+import jakarta.jms.ConnectionFactory;
 import javax.ws.rs.core.Configurable;
 
 public interface MessagingClientBuilder extends Configurable<MessagingClientBuilder> {

@@ -14,13 +14,13 @@
 package org.example;
 
 import javax.annotation.Resource;
-import javax.jms.ConnectionFactory;
-import javax.jms.JMSException;
+import jakarta.jms.ConnectionFactory;
+import jakarta.jms.JMSException;
 import jakarta.jms.MessageConsumer;
 import jakarta.jms.MessageHeader;
 import jakarta.jms.MessagingClientBuilder;
 import jakarta.jms.QueueListener;
-import javax.jms.Topic;
+import jakarta.jms.Topic;
 
 @MessageConsumer
 public class BuildAndNotify {

@@ -19,9 +19,9 @@ import org.example.destinations.BuildTopic;
 import org.example.destinations.TaskQueue;
 
 import javax.ejb.MessageDriven;
-import javax.jms.JMSException;
+import jakarta.jms.JMSException;
 import jakarta.jms.JMSMessageDrivenBean;
-import javax.jms.ObjectMessage;
+import jakarta.jms.ObjectMessage;
 
 @MessageDriven
 @MaxSessions(3)

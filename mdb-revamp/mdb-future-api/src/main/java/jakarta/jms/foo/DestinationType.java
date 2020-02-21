@@ -30,5 +30,5 @@ import java.lang.annotation.Target;
 @Target({ElementType.TYPE, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface DestinationType {
-    Class<? extends javax.jms.Destination> value();
+    Class<? extends jakarta.jms.Destination> value();
 }

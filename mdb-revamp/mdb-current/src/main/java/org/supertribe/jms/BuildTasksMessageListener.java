@@ -18,15 +18,15 @@ package org.supertribe.jms;
 
 import javax.ejb.ActivationConfigProperty;
 import javax.ejb.MessageDriven;
-import javax.jms.JMSException;
-import javax.jms.Message;
-import javax.jms.MessageListener;
-import javax.jms.ObjectMessage;
+import jakarta.jms.JMSException;
+import jakarta.jms.Message;
+import jakarta.jms.MessageListener;
+import jakarta.jms.ObjectMessage;
 
 @MessageDriven(activationConfig = {
         @ActivationConfigProperty(propertyName = "maxSessions", propertyValue = "3"),
         @ActivationConfigProperty(propertyName = "maxMessagesPerSessions", propertyValue = "1"),
-        @ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Queue"),
+        @ActivationConfigProperty(propertyName = "destinationType", propertyValue = "jakarta.jms.Queue"),
         @ActivationConfigProperty(propertyName = "destination", propertyValue = "TASK.QUEUE")
 })
 public class BuildTasksMessageListener implements MessageListener {

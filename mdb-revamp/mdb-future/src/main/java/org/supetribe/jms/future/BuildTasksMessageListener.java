@@ -17,8 +17,8 @@
 package org.supetribe.jms.future;
 
 import javax.ejb.MessageDriven;
-import javax.jms.JMSException;
-import javax.jms.ObjectMessage;
+import jakarta.jms.JMSException;
+import jakarta.jms.ObjectMessage;
 import jakarta.jms.foo.Destination;
 import jakarta.jms.foo.DestinationType;
 import jakarta.jms.foo.MaxMessagesPerSession;
@@ -31,14 +31,14 @@ import jakarta.jms.foo.MessageType;
 public class BuildTasksMessageListener {
 
     @Destination("TASK.QUEUE")
-    @DestinationType(javax.jms.Queue.class)
+    @DestinationType(jakarta.jms.Queue.class)
     public void processBuildTask(BuildTask buildTask) throws JMSException {
 
         System.out.println("Something useful " + buildTask);
     }
 
     @Destination("BUILD.TOPIC")
-    @DestinationType(javax.jms.Topic.class)
+    @DestinationType(jakarta.jms.Topic.class)
     @MessageType(ObjectMessage.class)
     public void processBuildTask(BuildNotification notification) throws JMSException {
 

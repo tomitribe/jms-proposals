@@ -17,9 +17,9 @@ import io.breezmq.MaxMessagesPerSession;
 import io.breezmq.MaxSessions;
 
 import javax.ejb.MessageDriven;
-import javax.jms.JMSException;
+import jakarta.jms.JMSException;
 import jakarta.jms.JMSMessageDrivenBean;
-import javax.jms.ObjectMessage;
+import jakarta.jms.ObjectMessage;
 import jakarta.jms.QueueListener;
 import jakarta.jms.TopicListener;
 

@@ -16,7 +16,7 @@ package org.example;
 import org.example.destinations.BuildNotificationsTopic;
 
 import javax.ejb.MessageDriven;
-import javax.jms.JMSException;
+import jakarta.jms.JMSException;
 import jakarta.jms.JMSMessageDrivenBean;
 import jakarta.jms.MessageProperty;
 import java.util.logging.Level;

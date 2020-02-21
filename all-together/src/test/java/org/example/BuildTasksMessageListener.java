@@ -18,7 +18,7 @@ import io.breezmq.MaxSessions;
 import org.example.destinations.BuildTopic;
 import org.example.destinations.TaskQueue;
 
-import javax.jms.JMSException;
+import jakarta.jms.JMSException;
 import jakarta.jms.MessageConsumer;
 
 @MessageConsumer

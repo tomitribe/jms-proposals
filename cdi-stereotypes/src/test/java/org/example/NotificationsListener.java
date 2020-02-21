@@ -14,7 +14,7 @@
 package org.example;
 
 import javax.ejb.MessageDriven;
-import javax.jms.JMSException;
+import jakarta.jms.JMSException;
 import jakarta.jms.MessageConsumer;
 import jakarta.jms.MessageProperty;
 import jakarta.jms.TopicListener;

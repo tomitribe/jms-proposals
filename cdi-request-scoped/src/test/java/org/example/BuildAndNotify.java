@@ -15,16 +15,16 @@ package org.example;
 
 import javax.annotation.Resource;
 import javax.enterprise.context.RequestScoped;
-import javax.jms.ConnectionFactory;
-import javax.jms.JMSContext;
-import javax.jms.JMSException;
-import javax.jms.JMSProducer;
-import javax.jms.JMSRuntimeException;
+import jakarta.jms.ConnectionFactory;
+import jakarta.jms.JMSContext;
+import jakarta.jms.JMSException;
+import jakarta.jms.JMSProducer;
+import jakarta.jms.JMSRuntimeException;
 import jakarta.jms.MessageConsumer;
 import jakarta.jms.MessageHeader;
-import javax.jms.ObjectMessage;
+import jakarta.jms.ObjectMessage;
 import jakarta.jms.QueueListener;
-import javax.jms.Topic;
+import jakarta.jms.Topic;
 
 @RequestScoped
 @MessageConsumer

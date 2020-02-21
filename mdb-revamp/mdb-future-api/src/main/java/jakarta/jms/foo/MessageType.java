@@ -30,5 +30,5 @@ import java.lang.annotation.Target;
 @Target({ElementType.TYPE, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface MessageType {
-    Class<? extends javax.jms.Message> value();
+    Class<? extends jakarta.jms.Message> value();
 }

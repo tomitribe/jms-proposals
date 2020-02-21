@@ -20,7 +20,7 @@ import org.example.properties.BuildUrlParam;
 import org.example.properties.DateParam;
 import org.example.properties.ProjectUrlParam;
 
-import javax.jms.JMSException;
+import jakarta.jms.JMSException;
 import jakarta.jms.MessageConsumer;
 import java.net.URI;
 import java.net.URL;
