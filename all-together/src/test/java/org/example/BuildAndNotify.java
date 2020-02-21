@@ -19,11 +19,11 @@ import javax.annotation.Resource;
 import javax.enterprise.context.ApplicationScoped;
 import javax.jms.ConnectionFactory;
 import javax.jms.JMSException;
-import javax.jms.MessageConsumer;
-import javax.jms.MessagingClientBuilder;
+import jakarta.jms.MessageConsumer;
+import jakarta.jms.MessagingClientBuilder;
 import javax.jms.Topic;
-import javax.jms.headers.CorrelationID;
-import javax.jms.headers.ReplyTo;
+import jakarta.jms.headers.CorrelationID;
+import jakarta.jms.headers.ReplyTo;
 
 @ApplicationScoped
 @MessageConsumer

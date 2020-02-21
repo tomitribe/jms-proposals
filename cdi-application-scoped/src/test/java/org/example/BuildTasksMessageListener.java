@@ -18,10 +18,10 @@ import io.breezmq.MaxSessions;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.jms.JMSException;
-import javax.jms.MessageConsumer;
+import jakarta.jms.MessageConsumer;
 import javax.jms.ObjectMessage;
-import javax.jms.QueueListener;
-import javax.jms.TopicListener;
+import jakarta.jms.QueueListener;
+import jakarta.jms.TopicListener;
 
 @ApplicationScoped
 @MessageConsumer

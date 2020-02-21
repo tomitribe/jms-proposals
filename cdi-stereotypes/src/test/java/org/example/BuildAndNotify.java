@@ -20,12 +20,12 @@ import javax.jms.JMSContext;
 import javax.jms.JMSException;
 import javax.jms.JMSProducer;
 import javax.jms.JMSRuntimeException;
-import javax.jms.MessageConsumer;
+import jakarta.jms.MessageConsumer;
 import javax.jms.ObjectMessage;
-import javax.jms.QueueListener;
+import jakarta.jms.QueueListener;
 import javax.jms.Topic;
-import javax.jms.headers.CorrelationID;
-import javax.jms.headers.ReplyTo;
+import jakarta.jms.headers.CorrelationID;
+import jakarta.jms.headers.ReplyTo;
 
 @ApplicationScoped
 @MessageConsumer

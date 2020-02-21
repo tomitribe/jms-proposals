@@ -18,12 +18,12 @@ import javax.ejb.MessageDriven;
 import javax.jms.ConnectionFactory;
 import javax.jms.JMSContext;
 import javax.jms.JMSException;
-import javax.jms.JMSMessageDrivenBean;
+import jakarta.jms.JMSMessageDrivenBean;
 import javax.jms.JMSProducer;
 import javax.jms.JMSRuntimeException;
-import javax.jms.MessageHeader;
+import jakarta.jms.MessageHeader;
 import javax.jms.ObjectMessage;
-import javax.jms.QueueListener;
+import jakarta.jms.QueueListener;
 import javax.jms.Topic;
 
 @MessageDriven

@@ -16,10 +16,10 @@ package org.example;
 import javax.annotation.Resource;
 import javax.jms.ConnectionFactory;
 import javax.jms.JMSException;
-import javax.jms.MessageConsumer;
-import javax.jms.MessageHeader;
-import javax.jms.MessagingClientBuilder;
-import javax.jms.QueueListener;
+import jakarta.jms.MessageConsumer;
+import jakarta.jms.MessageHeader;
+import jakarta.jms.MessagingClientBuilder;
+import jakarta.jms.QueueListener;
 import javax.jms.Topic;
 
 @MessageConsumer

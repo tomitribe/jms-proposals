@@ -20,13 +20,13 @@ import javax.ejb.MessageDriven;
 import javax.jms.ConnectionFactory;
 import javax.jms.JMSContext;
 import javax.jms.JMSException;
-import javax.jms.JMSMessageDrivenBean;
+import jakarta.jms.JMSMessageDrivenBean;
 import javax.jms.JMSProducer;
 import javax.jms.JMSRuntimeException;
 import javax.jms.ObjectMessage;
 import javax.jms.Topic;
-import javax.jms.headers.CorrelationID;
-import javax.jms.headers.ReplyTo;
+import jakarta.jms.headers.CorrelationID;
+import jakarta.jms.headers.ReplyTo;
 
 @MessageDriven
 public class BuildAndNotify implements JMSMessageDrivenBean {

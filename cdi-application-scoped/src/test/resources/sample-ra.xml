@@ -33,7 +33,7 @@
     <inbound-resourceadapter>
       <messageadapter>
         <messagelistener>
-          <messagelistener-type>javax.jms.MessageConsumer</messagelistener-type>
+          <messagelistener-type>jakarta.jms.MessageConsumer</messagelistener-type>
           <activationspec>
             <activationspec-class>io.breezmq.adapter.BreezmqActivationSpec</activationspec-class>
           </activationspec>

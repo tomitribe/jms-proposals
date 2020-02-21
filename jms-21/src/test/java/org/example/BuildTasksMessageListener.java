@@ -18,10 +18,10 @@ import io.breezmq.MaxSessions;
 
 import javax.ejb.MessageDriven;
 import javax.jms.JMSException;
-import javax.jms.JMSMessageDrivenBean;
+import jakarta.jms.JMSMessageDrivenBean;
 import javax.jms.ObjectMessage;
-import javax.jms.QueueListener;
-import javax.jms.TopicListener;
+import jakarta.jms.QueueListener;
+import jakarta.jms.TopicListener;
 
 @MessageDriven
 @MaxSessions(3)

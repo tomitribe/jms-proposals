@@ -21,7 +21,7 @@ import org.example.properties.DateParam;
 import org.example.properties.ProjectUrlParam;
 
 import javax.jms.JMSException;
-import javax.jms.MessageConsumer;
+import jakarta.jms.MessageConsumer;
 import java.net.URI;
 import java.net.URL;
 import java.util.Date;

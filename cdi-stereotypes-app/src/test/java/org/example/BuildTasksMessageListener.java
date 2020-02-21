@@ -20,7 +20,7 @@ import org.example.destinations.TaskQueue;
 
 import javax.ejb.MessageDriven;
 import javax.jms.JMSException;
-import javax.jms.JMSMessageDrivenBean;
+import jakarta.jms.JMSMessageDrivenBean;
 import javax.jms.ObjectMessage;
 
 @MessageDriven

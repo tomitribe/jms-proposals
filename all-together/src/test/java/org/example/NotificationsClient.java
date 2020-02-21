@@ -20,13 +20,9 @@ import org.example.properties.BuildUrlParam;
 import org.example.properties.DateParam;
 import org.example.properties.ProjectUrlParam;
 
-import javax.jms.JMSException;
-import javax.jms.MessageConsumer;
 import java.net.URI;
 import java.net.URL;
 import java.util.Date;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public interface NotificationsClient {
 

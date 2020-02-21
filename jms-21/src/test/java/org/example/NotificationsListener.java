@@ -14,10 +14,10 @@
 package org.example;
 
 import javax.ejb.MessageDriven;
-import javax.jms.JMSException;
-import javax.jms.JMSMessageDrivenBean;
-import javax.jms.MessageProperty;
-import javax.jms.TopicListener;
+
+import jakarta.jms.JMSMessageDrivenBean;
+import jakarta.jms.MessageProperty;
+import jakarta.jms.TopicListener;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 

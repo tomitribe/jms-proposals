@@ -37,6 +37,11 @@
 
   <dependencies>
     <dependency>
+        <groupId>jakarta.jms</groupId>
+        <artifactId>jakarta.jms-api</artifactId>
+        <version>3.0.0-RC1</version>
+    </dependency>
+    <dependency>
       <groupId>javax</groupId>
       <artifactId>javaee-api</artifactId>
       <version>8.0</version>

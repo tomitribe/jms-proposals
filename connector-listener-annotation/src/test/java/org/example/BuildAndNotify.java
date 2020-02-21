@@ -19,10 +19,10 @@ import javax.jms.JMSContext;
 import javax.jms.JMSException;
 import javax.jms.JMSProducer;
 import javax.jms.JMSRuntimeException;
-import javax.jms.MessageConsumer;
-import javax.jms.MessageHeader;
+import jakarta.jms.MessageConsumer;
+import jakarta.jms.MessageHeader;
 import javax.jms.ObjectMessage;
-import javax.jms.QueueListener;
+import jakarta.jms.QueueListener;
 import javax.jms.Topic;
 
 @MessageConsumer

@@ -19,7 +19,7 @@ import org.example.destinations.BuildTopic;
 import org.example.destinations.TaskQueue;
 
 import javax.jms.JMSException;
-import javax.jms.MessageConsumer;
+import jakarta.jms.MessageConsumer;
 
 @MessageConsumer
 @MaxSessions(3)

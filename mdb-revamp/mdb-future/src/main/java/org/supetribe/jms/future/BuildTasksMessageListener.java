@@ -19,11 +19,11 @@ package org.supetribe.jms.future;
 import javax.ejb.MessageDriven;
 import javax.jms.JMSException;
 import javax.jms.ObjectMessage;
-import javax.jms.foo.Destination;
-import javax.jms.foo.DestinationType;
-import javax.jms.foo.MaxMessagesPerSession;
-import javax.jms.foo.MaxSessions;
-import javax.jms.foo.MessageType;
+import jakarta.jms.foo.Destination;
+import jakarta.jms.foo.DestinationType;
+import jakarta.jms.foo.MaxMessagesPerSession;
+import jakarta.jms.foo.MaxSessions;
+import jakarta.jms.foo.MessageType;
 
 @MessageDriven
 @MaxSessions(3)
