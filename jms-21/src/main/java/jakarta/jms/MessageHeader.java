@@ -68,9 +68,19 @@ public @interface MessageHeader {
      */
     Header value();
 
-    public enum Header {
-        JMSCorrelationID, JMSCorrelationIDAsBytes, JMSDeliveryMode, JMSDeliveryTime, JMSDestination, JMSExpiration, JMSMessageID, JMSPriority, JMSRedelivered,
-        JMSReplyTo, JMSTimestamp, JMSType
+    enum Header {
+        JMSCorrelationID,
+        JMSCorrelationIDAsBytes,
+        JMSDeliveryMode,
+        JMSDeliveryTime,
+        JMSDestination,
+        JMSExpiration,
+        JMSMessageID,
+        JMSPriority,
+        JMSRedelivered,
+        JMSReplyTo,
+        JMSTimestamp,
+        JMSType
     }
 
 }
