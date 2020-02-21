@@ -39,7 +39,7 @@ public class NotificationsListener {
                                      @ProjectUrlParam final URL projectUrl,
                                      @BuildUrlParam final URI buildUrl,
                                      @BuildStatusParam final BuildStatus buildStatus,
-                                     final String message) throws JMSException {
+                                     final String message) {
 
 
         switch (buildStatus) {

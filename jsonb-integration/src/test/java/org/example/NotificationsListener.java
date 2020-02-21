@@ -32,7 +32,7 @@ public class NotificationsListener {
                                      @MessageProperty("projectUrl") final String projectUrl,
                                      @MessageProperty("buildUrl") final String buildUrl,
                                      @MessageProperty("buildStatus") final String buildStatus,
-                                     final String message) throws JMSException {
+                                     final String message) {
 
 
         if ("FAIL".equals(buildStatus)) {
