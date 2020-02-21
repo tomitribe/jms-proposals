@@ -16,7 +16,6 @@
  */
 package org.supetribe.jms.future;
 
-import javax.ejb.MessageDriven;
 import jakarta.jms.JMSException;
 import jakarta.jms.ObjectMessage;
 import jakarta.jms.foo.Destination;
@@ -24,6 +23,8 @@ import jakarta.jms.foo.DestinationType;
 import jakarta.jms.foo.MaxMessagesPerSession;
 import jakarta.jms.foo.MaxSessions;
 import jakarta.jms.foo.MessageType;
+
+import javax.ejb.MessageDriven;
 
 @MessageDriven
 @MaxSessions(3)

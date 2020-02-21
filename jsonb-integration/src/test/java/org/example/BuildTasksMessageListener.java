@@ -15,7 +15,6 @@ package org.example;
 
 import io.breezmq.MaxMessagesPerSession;
 import io.breezmq.MaxSessions;
-
 import jakarta.jms.JMSException;
 import jakarta.jms.MessageConsumer;
 import jakarta.jms.QueueListener;

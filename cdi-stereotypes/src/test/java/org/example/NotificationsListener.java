@@ -13,11 +13,12 @@
  */
 package org.example;
 
-import javax.ejb.MessageDriven;
 import jakarta.jms.JMSException;
 import jakarta.jms.MessageConsumer;
 import jakarta.jms.MessageProperty;
 import jakarta.jms.TopicListener;
+
+import javax.ejb.MessageDriven;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 

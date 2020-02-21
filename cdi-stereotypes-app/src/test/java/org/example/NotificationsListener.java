@@ -13,12 +13,12 @@
  */
 package org.example;
 
-import org.example.destinations.BuildNotificationsTopic;
-
-import javax.ejb.MessageDriven;
 import jakarta.jms.JMSException;
 import jakarta.jms.JMSMessageDrivenBean;
 import jakarta.jms.MessageProperty;
+import org.example.destinations.BuildNotificationsTopic;
+
+import javax.ejb.MessageDriven;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 

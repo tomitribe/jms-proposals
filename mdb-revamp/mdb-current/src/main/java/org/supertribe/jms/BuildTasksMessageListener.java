@@ -16,12 +16,13 @@
  */
 package org.supertribe.jms;
 
-import javax.ejb.ActivationConfigProperty;
-import javax.ejb.MessageDriven;
 import jakarta.jms.JMSException;
 import jakarta.jms.Message;
 import jakarta.jms.MessageListener;
 import jakarta.jms.ObjectMessage;
+
+import javax.ejb.ActivationConfigProperty;
+import javax.ejb.MessageDriven;
 
 @MessageDriven(activationConfig = {
         @ActivationConfigProperty(propertyName = "maxSessions", propertyValue = "3"),

@@ -13,7 +13,6 @@
  */
 package org.example;
 
-import javax.annotation.Resource;
 import jakarta.jms.ConnectionFactory;
 import jakarta.jms.JMSContext;
 import jakarta.jms.JMSException;
@@ -24,6 +23,8 @@ import jakarta.jms.MessageHeader;
 import jakarta.jms.ObjectMessage;
 import jakarta.jms.QueueListener;
 import jakarta.jms.Topic;
+
+import javax.annotation.Resource;
 
 @MessageConsumer
 public class BuildAndNotify {

@@ -15,13 +15,13 @@ package org.example;
 
 import io.breezmq.MaxMessagesPerSession;
 import io.breezmq.MaxSessions;
-
-import javax.enterprise.context.ApplicationScoped;
 import jakarta.jms.JMSException;
 import jakarta.jms.MessageConsumer;
 import jakarta.jms.ObjectMessage;
 import jakarta.jms.QueueListener;
 import jakarta.jms.TopicListener;
+
+import javax.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
 @MessageConsumer

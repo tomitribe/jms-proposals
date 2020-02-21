@@ -13,10 +13,6 @@
  */
 package org.example;
 
-import org.example.destinations.ProjectBuildQueue;
-
-import javax.annotation.Resource;
-import javax.ejb.MessageDriven;
 import jakarta.jms.ConnectionFactory;
 import jakarta.jms.JMSContext;
 import jakarta.jms.JMSException;
@@ -27,6 +23,10 @@ import jakarta.jms.ObjectMessage;
 import jakarta.jms.Topic;
 import jakarta.jms.headers.CorrelationID;
 import jakarta.jms.headers.ReplyTo;
+import org.example.destinations.ProjectBuildQueue;
+
+import javax.annotation.Resource;
+import javax.ejb.MessageDriven;
 
 @MessageDriven
 public class BuildAndNotify implements JMSMessageDrivenBean {

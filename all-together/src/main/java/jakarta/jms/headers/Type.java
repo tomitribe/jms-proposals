@@ -13,8 +13,9 @@
  */
 package jakarta.jms.headers;
 
-import javax.enterprise.inject.Stereotype;
 import jakarta.jms.MessageHeader;
+
+import javax.enterprise.inject.Stereotype;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 

@@ -15,13 +15,13 @@ package org.example;
 
 import io.breezmq.MaxMessagesPerSession;
 import io.breezmq.MaxSessions;
+import jakarta.jms.JMSException;
+import jakarta.jms.JMSMessageDrivenBean;
+import jakarta.jms.ObjectMessage;
 import org.example.destinations.BuildTopic;
 import org.example.destinations.TaskQueue;
 
 import javax.ejb.MessageDriven;
-import jakarta.jms.JMSException;
-import jakarta.jms.JMSMessageDrivenBean;
-import jakarta.jms.ObjectMessage;
 
 @MessageDriven
 @MaxSessions(3)

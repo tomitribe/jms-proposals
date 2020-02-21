@@ -13,8 +13,9 @@
  */
 package org.example.destinations;
 
-import javax.enterprise.inject.Stereotype;
 import jakarta.jms.TopicListener;
+
+import javax.enterprise.inject.Stereotype;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 

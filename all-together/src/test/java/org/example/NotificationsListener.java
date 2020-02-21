@@ -13,6 +13,8 @@
  */
 package org.example;
 
+import jakarta.jms.JMSException;
+import jakarta.jms.MessageConsumer;
 import org.example.destinations.BuildNotificationsTopic;
 import org.example.properties.BuildIdParam;
 import org.example.properties.BuildStatusParam;
@@ -20,8 +22,6 @@ import org.example.properties.BuildUrlParam;
 import org.example.properties.DateParam;
 import org.example.properties.ProjectUrlParam;
 
-import jakarta.jms.JMSException;
-import jakarta.jms.MessageConsumer;
 import java.net.URI;
 import java.net.URL;
 import java.util.Date;

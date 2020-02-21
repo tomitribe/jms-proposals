@@ -17,6 +17,7 @@
 package jakarta.jms;
 
 import jakarta.resource.spi.ConnectorDrivenBean;
+
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 

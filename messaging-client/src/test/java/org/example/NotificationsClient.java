@@ -15,6 +15,7 @@ package org.example;
 
 import jakarta.jms.MessageProperty;
 import jakarta.jms.TopicListener;
+
 import java.net.URL;
 
 public interface NotificationsClient {

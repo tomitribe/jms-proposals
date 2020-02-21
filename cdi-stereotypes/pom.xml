@@ -14,15 +14,15 @@
 
 -->
 <project>
-  <modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
-  <parent>
-    <groupId>org.eclipse.jms.proposals</groupId>
-    <artifactId>jms-proposals</artifactId>
-    <version>1.0-SNAPSHOT</version>
-  </parent>
+    <parent>
+        <groupId>org.eclipse.jms.proposals</groupId>
+        <artifactId>jms-proposals</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
 
-  <artifactId>cdi-stereotypes</artifactId>
+    <artifactId>cdi-stereotypes</artifactId>
 
 </project>
 

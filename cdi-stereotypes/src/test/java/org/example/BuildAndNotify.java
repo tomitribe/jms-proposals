@@ -13,8 +13,6 @@
  */
 package org.example;
 
-import javax.annotation.Resource;
-import javax.enterprise.context.ApplicationScoped;
 import jakarta.jms.ConnectionFactory;
 import jakarta.jms.JMSContext;
 import jakarta.jms.JMSException;
@@ -26,6 +24,9 @@ import jakarta.jms.QueueListener;
 import jakarta.jms.Topic;
 import jakarta.jms.headers.CorrelationID;
 import jakarta.jms.headers.ReplyTo;
+
+import javax.annotation.Resource;
+import javax.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
 @MessageConsumer

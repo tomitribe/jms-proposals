@@ -13,8 +13,9 @@
  */
 package org.example.properties;
 
-import javax.enterprise.inject.Stereotype;
 import jakarta.jms.MessageProperty;
+
+import javax.enterprise.inject.Stereotype;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 

@@ -14,53 +14,53 @@
 
 -->
 <project>
-  <modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.eclipse.jms.proposals</groupId>
-  <artifactId>jms-proposals</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <packaging>pom</packaging>
+    <groupId>org.eclipse.jms.proposals</groupId>
+    <artifactId>jms-proposals</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
-  <modules>
-    <module>mdb-revamp</module>
-    <module>jms-21</module>
-    <module>connector-listener-annotation</module>
-    <module>cdi-application-scoped</module>
-    <module>cdi-request-scoped</module>
-    <module>cdi-stereotypes</module>
-    <module>cdi-stereotypes-app</module>
-    <module>property-conversion</module>
-    <module>jsonb-integration</module>
-    <module>all-together</module>
-    <module>messaging-client</module>
-  </modules>
+    <modules>
+        <module>mdb-revamp</module>
+        <module>jms-21</module>
+        <module>connector-listener-annotation</module>
+        <module>cdi-application-scoped</module>
+        <module>cdi-request-scoped</module>
+        <module>cdi-stereotypes</module>
+        <module>cdi-stereotypes-app</module>
+        <module>property-conversion</module>
+        <module>jsonb-integration</module>
+        <module>all-together</module>
+        <module>messaging-client</module>
+    </modules>
 
-  <dependencies>
-    <dependency>
-        <groupId>jakarta.jms</groupId>
-        <artifactId>jakarta.jms-api</artifactId>
-        <version>3.0.0-RC1</version>
-    </dependency>
-    <dependency>
-      <groupId>javax</groupId>
-      <artifactId>javaee-api</artifactId>
-      <version>8.0</version>
-    </dependency>
-  </dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>jakarta.jms</groupId>
+            <artifactId>jakarta.jms-api</artifactId>
+            <version>3.0.0-RC1</version>
+        </dependency>
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>8.0</version>
+        </dependency>
+    </dependencies>
 
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <configuration>
-          <optimize>true</optimize>
-          <source>1.8</source>
-          <target>1.8</target>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <optimize>true</optimize>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
 
